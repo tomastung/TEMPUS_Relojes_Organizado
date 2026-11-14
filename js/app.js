@@ -26,6 +26,11 @@ const NG=["Hora análoga", "Función de fecha", "Correa de silicona", "Resistent
 const NC=["Cronógrafo funcional", "Función de fecha", "Correa de silicona", "Resistente al agua 50 m"];
 const CA=["Cronógrafo funcional", "Hora análoga y calendario", "Correa de acero"];
 const CS=["Cronógrafo funcional", "Hora análoga y calendario", "Correa de silicona"];
+const JD=["Calendario","Cronógrafos funcionales","Correa de silicona","Estuche de lujo incluido"];
+const SA=["Doble hora","Luz","Correa de goma","Estuche de lujo incluido"];
+const KC=["Hora análoga","Cronógrafos funcionales","Calendario","Correa de acero","Estuche de lujo incluido"];
+const KA=["Hora análoga","Correa de acero","Estuche de lujo incluido"];
+const KU=["Hora análoga","Automático","Correa de acero","Estuche de lujo incluido"];
 const P=[
 ["j4","Joefox","Azul cielo transparente",60000,J],["j5","Joefox","Verde y crema",60000,J],["j6","Joefox","Azul y rojo transparente",60000,J],
 ["j7","Joefox","Azul y oro rosa",60000,J],["j8","Joefox","Negro y dorado",60000,J],["j9","Joefox","Gris y oro rosa",60000,J],["j10","Joefox","Negro y gris",60000,J],
@@ -80,7 +85,19 @@ const P=[
 ["cc11","Curren","Cronógrafo azul y negro",90000,CS],
 ["cc12","Curren","Cronógrafo verde y oro rosa",90000,CS],
 ["cc13","Curren","Cronógrafo negro y dorado",90000,CS],
-["cc14","Curren","Cronógrafo negro, detalles verde limón",90000,CA]
+["cc14","Curren","Cronógrafo negro, detalles verde limón",90000,CA],
+["jd1","Joefox","Dama blanco, esfera blanca",72000,JD,"dama"],
+["sa1","Sanda","Dama dorado y negro, correa negra",60000,SA,"dama"],
+["sa2","Sanda","Dama oro rosa y blanco, correa blanca",60000,SA,"dama"],
+["sa3","Sanda","Dama oro rosa, correa beige",85000,SA,"dama"],
+["sa4","Sanda","Dama oro rosa y negro, correa negra",85000,SA,"dama"],
+["ko1","Kosmo","Casino negro, esfera ruleta",120000,KA],
+["ko2","Kosmo","Casino dorado, esfera ruleta",120000,KA],
+["ko3","Kosmo","Cronógrafo negro, detalles naranja",100000,KC],
+["ko4","Kosmo","Cronógrafo negro, esfera oro rosa",100000,KC],
+["ko5","Kosmo","Cronógrafo negro, detalles rojos",100000,KC],
+["ko6","Kosmo","Cronógrafo negro y oro rosa",100000,KC],
+["ko7","Kosmo","Automático dorado, esfera azul",200000,KU]
 ].map(([id,b,n,base,f,g])=>({id,brand:b,name:n,base,f,g:g||"hombre",img:IMG[id]}));
 /* ====== LÓGICA ====== */
 const $=s=>document.querySelector(s),cop=n=>"$"+n.toLocaleString("es-CO");
