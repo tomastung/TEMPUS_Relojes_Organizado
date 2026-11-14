@@ -98,7 +98,7 @@ const P=[
 ["ko5","Kosmo","Cronógrafo negro, detalles rojos",100000,KC],
 ["ko6","Kosmo","Cronógrafo negro y oro rosa",100000,KC],
 ["ko7","Kosmo","Automático dorado, esfera azul",200000,KU]
-].map(([id,b,n,base,f,g])=>({id,brand:b,name:n,base,f,g:g||"hombre",img:IMG[id]}));
+].map(([id,b,n,base,f,g])=>({id,brand:b,name:n,base,f,g:g||"hombre",img:IMG[id]||("imagenes/"+id+".jpg")}));
 /* ====== LÓGICA ====== */
 const $=s=>document.querySelector(s),cop=n=>"$"+n.toLocaleString("es-CO");
 let cart={},pend={},fg="todos",fb="todas";const DESC=RECARGO_1-RECARGO_PROMO;const pq=id=>pend[id]||1;const ADM=location.hash=="#precios";
