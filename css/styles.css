@@ -150,3 +150,80 @@ aside { transition: transform .38s cubic-bezier(.2,.75,.25,1); }
     transition-duration: .01ms !important;
   }
 }
+
+/* =========================================================
+   AJUSTES DE NAVEGACIÓN Y CARRITO — OROZCO LUXURY
+   Mantiene el encabezado visible y el checkout accesible.
+   ========================================================= */
+@keyframes body-fade-only {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Evita que una transformación en body interfiera con elementos fijos. */
+body {
+  padding-top: 60px;
+  animation: body-fade-only .45s ease both;
+}
+
+/* Encabezado siempre visible durante el desplazamiento. */
+body > header {
+  position: fixed;
+  top: env(safe-area-inset-top, 0px);
+  left: 0;
+  right: 0;
+  z-index: 15;
+}
+
+/* El panel ocupa la pantalla; la lista se desplaza, el checkout no. */
+aside#dr {
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
+  bottom: auto;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+#dr > header {
+  flex: 0 0 auto;
+}
+
+#dr > .items {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+#dr > .foot {
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 2;
+  background: var(--bg);
+  padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+}
+
+/* En pantallas bajitas, compacta el checkout para conservar visible el botón. */
+@media (max-height: 680px) {
+  #dr > .foot {
+    gap: 7px;
+    padding-top: 10px;
+  }
+  #dr .tip {
+    padding: 7px 10px;
+    font-size: 12px;
+    line-height: 1.3;
+  }
+  #dr .foot input {
+    padding: 8px 10px;
+  }
+  #dr .wa {
+    padding: 10px;
+    font-size: 15px;
+  }
+  #dr .tot span:last-child {
+    font-size: 22px;
+  }
+}
+
