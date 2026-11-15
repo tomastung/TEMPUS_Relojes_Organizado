@@ -148,7 +148,7 @@ $("#grid").onclick=e=>{const s=e.target.closest("[data-q]");if(s){const id=s.dat
 $("#items").onclick=e=>{const b=e.target.closest("[data-d]");if(b)set(b.dataset.id,+b.dataset.d)};
 $("#open").onclick=()=>open(true);$("#close").onclick=$("#ov").onclick=()=>open(false);
 document.onkeydown=e=>{if(e.key=="Escape")open(false)};
-function seg(sel,key){$(sel).onclick=e=>{const b=e.target.closest("button");if(!b)return;[...$(sel).children].forEach(c=>c.setAttribute("aria-pressed",c==b));key(b);grid()}}
+function seg(sel,key){$(sel).onclick=e=>{const b=e.target.closest("button");if(!b)return;[...$(sel).children].forEach(c=>c.setAttribute("aria-pressed",c==b));key(b);grid();cards()}}
 seg("#fg",b=>fg=b.dataset.g);seg("#fb",b=>fb=b.dataset.b);
 $("#wa").onclick=()=>{
  if(!$("#nm").value.trim()||!$("#ct").value.trim()){const tp=$("#tip");tp.className="tip err";tp.textContent="Escribe tu nombre y tu ciudad para enviar el pedido.";($("#nm").value.trim()?$("#ct"):$("#nm")).focus();toast("Falta tu nombre o ciudad");return}
