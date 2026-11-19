@@ -31,6 +31,7 @@ const SA=["Doble hora","Luz","Correa de goma","Estuche de lujo incluido"];
 const KC=["Hora análoga","Cronógrafos funcionales","Calendario","Correa de acero","Estuche de lujo incluido"];
 const KA=["Hora análoga","Correa de acero","Estuche de lujo incluido"];
 const KU=["Hora análoga","Automático","Correa de acero","Estuche de lujo incluido"];
+const SH=["Doble hora","Luz","Correa de silicona","Estuche de lujo incluido"];
 const P=[
 ["j4","Joefox","Azul cielo transparente",60000,J],["j5","Joefox","Verde y crema",60000,J],["j6","Joefox","Azul y rojo transparente",60000,J],
 ["j7","Joefox","Azul y oro rosa",60000,J],["j8","Joefox","Negro y dorado",60000,J],["j9","Joefox","Gris y oro rosa",60000,J],["j10","Joefox","Negro y gris",60000,J],
@@ -97,7 +98,11 @@ const P=[
 ["ko4","Kosmo","Cronógrafo negro, esfera oro rosa",100000,KC],
 ["ko5","Kosmo","Cronógrafo negro, detalles rojos",100000,KC],
 ["ko6","Kosmo","Cronógrafo negro y oro rosa",100000,KC],
-["ko7","Kosmo","Automático dorado, esfera azul",200000,KU]
+["ko7","Kosmo","Automático dorado, esfera azul",200000,KU],
+["sh1","Sanda","Negro, esfera negra y rojo, correa negra",60000,SH],
+["sh2","Sanda","Plateado y negro, correa negra",60000,SH],
+["sh3","Sanda","Plateado y negro, correa blanca",60000,SH],
+["sh4","Sanda","Plateado y azul, correa azul",60000,SH]
 ].map(([id,b,n,base,f,g])=>({id,brand:b,name:n,base,f,g:g||"hombre",img:IMG[id]||("imagenes/"+id+".jpg")}));
 /* ====== LÓGICA ====== */
 const $=s=>document.querySelector(s),cop=n=>"$"+n.toLocaleString("es-CO");
