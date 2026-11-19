@@ -32,6 +32,7 @@ const KC=["Hora análoga","Cronógrafos funcionales","Calendario","Correa de ace
 const KA=["Hora análoga","Correa de acero","Estuche de lujo incluido"];
 const KU=["Hora análoga","Automático","Correa de acero","Estuche de lujo incluido"];
 const SH=["Doble hora","Luz","Correa de silicona","Estuche de lujo incluido"];
+const SC=["Hora análoga","Calendario","Cronógrafos funcionales","Correa de silicona","Estuche de lujo incluido"];
 const P=[
 ["j4","Joefox","Azul cielo transparente",60000,J],["j5","Joefox","Verde y crema",60000,J],["j6","Joefox","Azul y rojo transparente",60000,J],
 ["j7","Joefox","Azul y oro rosa",60000,J],["j8","Joefox","Negro y dorado",60000,J],["j9","Joefox","Gris y oro rosa",60000,J],["j10","Joefox","Negro y gris",60000,J],
@@ -102,7 +103,15 @@ const P=[
 ["sh1","Sanda","Negro, esfera negra y rojo, correa negra",60000,SH],
 ["sh2","Sanda","Plateado y negro, correa negra",60000,SH],
 ["sh3","Sanda","Plateado y negro, correa blanca",60000,SH],
-["sh4","Sanda","Plateado y azul, correa azul",60000,SH]
+["sh4","Sanda","Plateado y azul, correa azul",60000,SH],
+["sh5","Sanda","Plateado y negro, correa blanca, esfera con engranajes",60000,SH],
+["sh6","Sanda","Oro rosa y negro, correa negra, esfera con engranajes",60000,SH],
+["sh7","Sanda","Oro rosa y azul, correa azul, esfera con engranajes",60000,SH],
+["sh8","Sanda","Negro y oro rosa, correa negra",85000,SC],
+["sh9","Sanda","Negro y plateado, detalles rojos, correa negra",85000,SC],
+["sh10","Sanda","Blanco y plateado, correa blanca",85000,SC],
+["sh11","Sanda","Azul y oro rosa, correa azul",85000,SC],
+["sh12","Sanda","Negro, detalles rojos, correa negra",85000,SC]
 ].map(([id,b,n,base,f,g])=>({id,brand:b,name:n,base,f,g:g||"hombre",img:IMG[id]||("imagenes/"+id+".jpg")}));
 /* ====== LÓGICA ====== */
 const $=s=>document.querySelector(s),cop=n=>"$"+n.toLocaleString("es-CO");
